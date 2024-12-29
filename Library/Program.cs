@@ -1,5 +1,9 @@
+
+using Library.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.GetSection("Config").Bind(new Config());
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer(); 
